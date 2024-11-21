@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NotificationApp.MainPage">
+
+ 
+    <ContentPage.Content>
+        <StackLayout Padding="20" VerticalOptions="Center">
+            <SwipeView>
+                <!-- Define Left Swipe Actions -->
+                <SwipeView.LeftItems>
+                    <SwipeItems Mode="Reveal">
+                        <SwipeItem 
+                            Text="Favorite" 
+                            BackgroundColor="LightBlue" 
+                            IconImageSource="star.png"
+                            Invoked="OnLeftSwipe" />
+                    </SwipeItems>
+                </SwipeView.LeftItems>
+
+                <!-- Define Right Swipe Actions -->
+                <SwipeView.RightItems>
+                    <SwipeItems Mode="Reveal">
+                        <SwipeItem 
+                            Text="Delete" 
+                            BackgroundColor="LightCoral" 
+                            IconImageSource="delete.png"
+                            Invoked="OnRightSwipe" />
+                    </SwipeItems>
+                </SwipeView.RightItems>
+
+                <!-- Main Content -->
+                <Frame Padding="10" 
+                       CornerRadius="10" 
+                       BackgroundColor="LightGray">
+                    <Label Text="Swipe Left or Right" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center" />
+                </Frame>
+            </SwipeView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
